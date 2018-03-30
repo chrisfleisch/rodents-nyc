@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Custom styles -->
+  <link href="main.css" rel="stylesheet">
+  <title>Rodents in NYC Visualization</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <nav class="nav nav-masthead" style="float: right;">
+      <a class="nav-link active" href="index.html">Active Rodent Signs</a>
+      <a class="nav-link" href="#">Restaurant Rodents</a>
+    </nav>
+    <h1>Rodents in NYC Visualization</h1>
+    <p class="lead">By: Chris Fleisch, Marshall Ratliff, Christopher Danicic</p>
+    <h2>Active Rodent Inspections</h2>
+    <p>
+      Using the <a href="https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj">rodent inspection data</a>
+      from NYC Open Data we
+      visualized the inspections that resulted in <strong>active rat signs</strong>.
+      Active signs would include any of the following: fresh tracks, fresh droppings,
+      active burrows, active runways and rub marks,
+      fresh gnawing marks, and live rats. This data is provided by the Department
+      of Health and Mental Hygiene (DOHMH) and contains records for the years 2010 through 2017.
+    </p>
+    <p>
+      This active rodent inspection visualization was created for people living
+      in NYC who might be interested in moving to a different neighborhood,
+      public health and safety advocates that are interested in which neighborhoods
+      are in greatest need of improvement, the rodent sensitive population
+      who need to be cautious or avoid rodent infested areas, or local officials
+      who need to see where they should focus resources to reduce rodent populations.
+    </p>
+    <h3>Map of rodent signs and activity over time</h3>
+    <p>
+      Active rodent signs can be seen in all the boroughs of NYC with some being
+      much more active than others. The number of signs also appears to be increasing
+      over time. The map is interactive and can be panned and zoomed.
+      The data may be filtered by clicking on each zip code and more
+      information is displayed by hovering over the different zip codes. The
+      borough information in the line plot can filter by year and borough when clicked on
+      or it can reveal more information by hovering over different points in the timeline.
+    </p>
+
+    <div class='row tableauPlaceholder' id='viz1522450662078' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InspectionDash&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='InspectionDash&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InspectionDash&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1522450662078');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h3>Seasonal Rodent Signs</h3>
+    <p>
+      Signs of rodents do not appear to be consistent year to year, however, there are some years
+      when signs of rodents are higher in one borough that correlate with lower signs in another borough.
+      For example, changing the year of the inspection date to 2012 shows that when rodent signs are high
+      in the Bronx they are lower in Manhattan. And when they are higher in Manhattan in the month of May
+      the rodent signs are much lower in the Bronx at the same time. There may be a limited number of
+      inspectors that are available, and they could be more active in one borough at the expense of another.
+      Hovering over the points in on the lines will reveal more information on the number of signs.
+    </p>
+
+    <div class='row tableauPlaceholder' id='viz1522450619274' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InspectionDash&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='InspectionDash&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InspectionDash&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1522450619274');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h3>New and old inspection locations with active rodent signs</h3>
+    <p>
+      The number of inspections with active rodent signs varies greatly between
+      the different boroughs. Sometimes the inspections take place in a location
+      that has never been inspected before and sometimes the inspectors go to places
+      they have been to at a previous time. For some boroughs the split between
+      new and old locations is close like in Queens and Staten Island. In the Bronx
+      the inspectors returned to previous locations with rodent signs more often
+      than visiting new locations. Hovering over the lines will display the number
+      of active rat signs seen that month.
+    </p>
+
+    <div class='tableauPlaceholder' id='viz1522452594292' style='position: relative'><noscript><a href='#'><img alt='New and Old Inspection Locations by Month ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InspectionDash&#47;NewandOldInspectionLocationsbyMonth&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='InspectionDash&#47;NewandOldInspectionLocationsbyMonth' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InspectionDash&#47;NewandOldInspectionLocationsbyMonth&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1522452594292');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Footer.</span>
+    </div>
+  </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
