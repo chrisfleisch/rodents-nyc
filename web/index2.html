@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Custom styles -->
+  <link href="main.css" rel="stylesheet">
+  <title>Rodents in NYC Visualization</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <nav class="nav nav-masthead" style="float: right;">
+      <a class="nav-link active" href="index.html">Active Rodent Signs</a>
+      <a class="nav-link active" href="index2.html">Restaurant Rodents</a>
+    </nav>
+    <h1>Rodents in NYC Visualization</h1>
+    <p class="lead">By: Chris Fleisch, Marshall Ratliff, Christopher Danicic</p>
+    <h2>Rodents and Restaurants</h2>
+    <p>
+      Using the <a href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j">restaurant inspection data</a>
+      from NYC Open Data we
+      visualized the inspection violations that were the result of rodents or rodent
+      signs.
+      This data is provided by the Department
+      of Health and Mental Hygiene (DOHMH) and contains records for the years 2010 through 2017.
+    </p>
+    <p>
+      This restaurant violations visualization was created for people living
+      in NYC who like to dine at restaurants but prefer to keep their food as far
+      from rodents as possible. In addition, quantity, quality and type of restaurants
+      in an area may influence the rodent population itself, and as such may be
+      valuable for health and safety advocates or local officials who would like
+      to better focus resources and understand causal factors of rodent population
+      growth.
+    </p>
+    <h3>Rodent Sightings Vs. Number of Restaurant by Zipcode and Borough</h3>
+    <p>
+      Restaurants are potential sources of food and shelter for rodents. It is
+      reasonable to posit there may be some causal relationship between the number
+      of restaurants and number of rodent sightings in an area, which is roughly
+      indicated here. This may warrant further analysis of what types of restaurants,
+      what working conditions, or what business practices may support or inhibit
+      growth of rodent populations. This visualization can be filtered by borough
+      to compare how these trends vary regionally as well as by price, level, and
+      rating to determine how different types of restaurants may be more or less
+      likely to contribute to the rodent population.
+    </p>
+
+    <div class='tableauPlaceholder' id='viz1522872508784' style='position: relative'><noscript><a href='#'><img alt='Restaurant Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Restaurant_Search_Tool_2&#47;RestaurantDashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Restaurant_Search_Tool_2&#47;RestaurantDashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Restaurant_Search_Tool_2&#47;RestaurantDashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1522872508784');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <h3>Restaurant Search Tool</h3>
+    <p>
+      This tool is for the NYC restaurant goer who would prefer not to eat food
+      that has come into contact with rodents or their feces, which is presumably
+      everyone. The dashboard contains 4 windows. Clockwise from top-left they are:
+      <ol type="I">
+        <li>(Top-Left) List of restaurants currently in the selection with violation
+        count, ordered from most to least violations, although this can be adjsted
+        via the icon in top-center of the window. Further details on price, ratings,
+        and location on hover-over of the bars. Click to filter by single restaurants.</li>
+        <li>(Top-Right) Map of New York by zipcode. Color corresponds to number
+        restaurants in the zipcode within the current selection. Click to filter
+        by restaurant.</li>
+        <li>(Bottom-Right) Bar chart of average number of rodent violations by individual
+        types of cuisine, sorted from most to least. Click to filter by cuisine
+        type.</li>
+        <li>(Bottom-Left) Heatmap of average number of rodent violations by price and rating
+        (from <a href="https://developers.google.com/places/">the google places api</a>
+        corresponding to number of dollar signs and binned rating values). Click
+        to filter by price and/or rating (click, hold and drag over to select ranges).</li>
+      </ol>
+      Filter boxes in the panel on the right include custom-list search boxes for
+      searching for specific restaurants, cuisine types, zipcodes, or boroughs which
+      can use added or removed from your selection, and a list of ratings and prices
+      included in the view.
+    </p>
+
+    <div class='tableauPlaceholder' id='viz1522874911393' style='position: relative'><noscript><a href='#'><img alt='Restaurant Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Restaurant_Search_Tool&#47;RestaurantDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Restaurant_Search_Tool&#47;RestaurantDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Restaurant_Search_Tool&#47;RestaurantDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1522874911393');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Footer.</span>
+    </div>
+  </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
