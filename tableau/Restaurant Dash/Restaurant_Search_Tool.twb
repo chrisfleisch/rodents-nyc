@@ -2,7 +2,7 @@
 
 <!-- build 10500.18.0305.1200                               -->
 <workbook original-version='10.5' source-build='10.5.2 (10500.18.0305.1200)' source-platform='mac' version='10.5' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
-  <repository-location id='Restaurant_Search_Tool' path='/workbooks' revision='1.5' />
+  <repository-location id='Restaurant_Search_Tool_0' path='/workbooks' revision='1.0' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -2197,6 +2197,1476 @@
         </zone>
       </zones>
     </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='19' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='LET&apos;S BEGIN!' captured-sheet='Restaurant Dashboard' id='1' />
+                  <story-point caption='Choose and area of the city. We&apos;ll zoom in and use Lasso selection from the lower button on the map toolbar.' captured-sheet='Restaurant Dashboard' id='2'>
+                    <capturedDeltas>
+                      <worksheet name='Restaurants By Zip'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4997006.1285871007' min='4949615.1710502915' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8206354.9757291907' min='-8259555.1474156734' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Say you want more affordable food but with a high rating. Let&apos;s select a range of ratings and see what restaurants have recorded rodent sighting violations.' captured-sheet='Restaurant Dashboard' id='3'>
+                    <capturedDeltas>
+                      <worksheet name='Average Rodent Violations By Ratings &amp; Price'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10002' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10003' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10009' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10010' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10012' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10013' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Cuisine and Rodent Violations'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10002' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10003' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10009' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10010' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10012' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10013' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurant List by Violation Count'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10002' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10003' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10009' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10010' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10012' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10013' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurants By Zip'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4983805.907538035' min='4963897.3774312474' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8223325.3918853477' min='-8245830.6873338157' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>376</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10014</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-74.0034 40.727,-74.0114 40.7282,-74.0094 40.7426,-74.0036 40.7407,-74.001 40.7317))&quot;</value>
+                                <value>40.734299999999998</value>
+                                <value>-74.006</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>458</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10013</value>
+                                <value>&quot;POLYGON((-73.9986 40.7135,-74.013 40.7172,-74.0133 40.7183,-74.0114 40.7282,-74.0034 40.727,-74.0044 40.7241,-73.9944 40.7195,-73.9975 40.714,-73.9986 40.7135))&quot;</value>
+                                <value>40.7194</value>
+                                <value>-74.003</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>375</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10012</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-73.997 40.7314,-73.9926 40.7241,-73.9944 40.7195,-74.0044 40.7241,-74.0034 40.727,-74.001 40.7317))&quot;</value>
+                                <value>40.7256</value>
+                                <value>-73.999200000000002</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>423</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10011</value>
+                                <value>&quot;POLYGON((-73.9923 40.7436,-73.9909 40.7397,-73.997 40.7314,-74.001 40.7317,-74.0036 40.7407,-74.0094 40.7426,-74.0089 40.7511,-73.9923 40.7436))&quot;</value>
+                                <value>40.7393</value>
+                                <value>-73.998900000000006</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>242</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10010</value>
+                                <value>&quot;POLYGON((-73.9923 40.7436,-73.9862 40.7434,-73.9726 40.7358,-73.9738 40.7327,-73.9799 40.735,-73.9909 40.7397,-73.9923 40.7436))&quot;</value>
+                                <value>40.740000000000002</value>
+                                <value>-73.985500000000002</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>274</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10009</value>
+                                <value>&quot;MULTIPOLYGON(((-73.9579 40.7241,-73.9589 40.7244,-73.9581 40.7245,-73.9579 40.7241)),((-73.9799 40.735,-73.9738 40.7327,-73.9715 40.7276,-73.9751 40.7146,-73.9749 40.7188,-73.9885 40.7233,-73.9799 40.735)))&quot;</value>
+                                <value>40.726700000000001</value>
+                                <value>-73.979699999999994</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>633</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10003</value>
+                                <value>&quot;POLYGON((-73.997 40.7314,-73.9909 40.7397,-73.9799 40.735,-73.9885 40.7233,-73.9926 40.7241,-73.997 40.7314))&quot;</value>
+                                <value>40.731200000000001</value>
+                                <value>-73.988799999999998</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>439</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10002</value>
+                                <value>&quot;POLYGON((-73.9921 40.7095,-73.9975 40.714,-73.9944 40.7195,-73.9926 40.7241,-73.9885 40.7233,-73.9749 40.7188,-73.9751 40.7146,-73.9779 40.7105,-73.9921 40.7095))&quot;</value>
+                                <value>40.715499999999999</value>
+                                <value>-73.990099999999998</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Let&apos;s look for at restaurants with prices ranges 1-3 and ratings between 4 and 5.' captured-sheet='Restaurant Dashboard' id='8'>
+                    <capturedDeltas>
+                      <worksheet name='Average Rodent Violations By Ratings &amp; Price'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10003' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10009' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10010' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10012' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10013' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>6.2168674698795181</value>
+                                <value>&quot;3.0&quot;</value>
+                                <value>&quot;4.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>4.658385093167702</value>
+                                <value>&quot;3.0&quot;</value>
+                                <value>&quot;4.5&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>3.5</value>
+                                <value>&quot;3.0&quot;</value>
+                                <value>&quot;5.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>6.8499999999999996</value>
+                                <value>&quot;2.0&quot;</value>
+                                <value>&quot;4.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>5.9468354430379744</value>
+                                <value>&quot;2.0&quot;</value>
+                                <value>&quot;4.5&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>3.5833333333333335</value>
+                                <value>&quot;2.0&quot;</value>
+                                <value>&quot;5.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>5.7149122807017543</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>5.4045454545454543</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.5&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>3.8666666666666667</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;5.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                      <worksheet name='Cuisine and Rodent Violations'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                              <groupfilter function='member' level='[price_level]' member='&quot;2.0&quot;' />
+                              <groupfilter function='member' level='[price_level]' member='&quot;3.0&quot;' />
+                            </groupfilter>
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;5.0&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10003' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10009' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10010' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10012' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10013' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurant List by Violation Count'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                              <groupfilter function='member' level='[price_level]' member='&quot;2.0&quot;' />
+                              <groupfilter function='member' level='[price_level]' member='&quot;3.0&quot;' />
+                            </groupfilter>
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;5.0&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10003' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10009' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10010' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10012' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10013' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurants By Zip'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                              <groupfilter function='member' level='[price_level]' member='&quot;2.0&quot;' />
+                              <groupfilter function='member' level='[price_level]' member='&quot;3.0&quot;' />
+                            </groupfilter>
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;5.0&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4980894.5761983832' min='4966848.8249967126' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8227615.1537363902' min='-8243459.6799989138' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>243</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10014</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-74.0034 40.727,-74.0114 40.7282,-74.0094 40.7426,-74.0036 40.7407,-74.001 40.7317))&quot;</value>
+                                <value>40.734299999999998</value>
+                                <value>-74.006</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>244</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10013</value>
+                                <value>&quot;POLYGON((-73.9986 40.7135,-74.013 40.7172,-74.0133 40.7183,-74.0114 40.7282,-74.0034 40.727,-74.0044 40.7241,-73.9944 40.7195,-73.9975 40.714,-73.9986 40.7135))&quot;</value>
+                                <value>40.7194</value>
+                                <value>-74.003</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>237</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10012</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-73.997 40.7314,-73.9926 40.7241,-73.9944 40.7195,-74.0044 40.7241,-74.0034 40.727,-74.001 40.7317))&quot;</value>
+                                <value>40.7256</value>
+                                <value>-73.999200000000002</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>235</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10011</value>
+                                <value>&quot;POLYGON((-73.9923 40.7436,-73.9909 40.7397,-73.997 40.7314,-74.001 40.7317,-74.0036 40.7407,-74.0094 40.7426,-74.0089 40.7511,-73.9923 40.7436))&quot;</value>
+                                <value>40.7393</value>
+                                <value>-73.998900000000006</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>117</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10010</value>
+                                <value>&quot;POLYGON((-73.9923 40.7436,-73.9862 40.7434,-73.9726 40.7358,-73.9738 40.7327,-73.9799 40.735,-73.9909 40.7397,-73.9923 40.7436))&quot;</value>
+                                <value>40.740000000000002</value>
+                                <value>-73.985500000000002</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>161</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10009</value>
+                                <value>&quot;MULTIPOLYGON(((-73.9579 40.7241,-73.9589 40.7244,-73.9581 40.7245,-73.9579 40.7241)),((-73.9799 40.735,-73.9738 40.7327,-73.9715 40.7276,-73.9751 40.7146,-73.9749 40.7188,-73.9885 40.7233,-73.9799 40.735)))&quot;</value>
+                                <value>40.726700000000001</value>
+                                <value>-73.979699999999994</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>379</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10003</value>
+                                <value>&quot;POLYGON((-73.997 40.7314,-73.9909 40.7397,-73.9799 40.735,-73.9885 40.7233,-73.9926 40.7241,-73.997 40.7314))&quot;</value>
+                                <value>40.731200000000001</value>
+                                <value>-73.988799999999998</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='We find Five Guy&apos;s, something easy to recognize. We notice that it has  a price level of 1 and rating of 4, with 3 violations (not perfect, but not bad for NYC).' captured-sheet='Restaurant Dashboard' id='9'>
+                    <capturedDeltas>
+                      <worksheet name='Average Rodent Violations By Ratings &amp; Price'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Restaurant Name)]'>
+                          <groupfilter function='member' level='[DBA]' member='&quot;FIVE GUYS FAMOUS BURGERS AND FRIES&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>3.0</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>1.0</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.5&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                      <worksheet name='Cuisine and Rodent Violations'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Restaurant Name)]'>
+                          <groupfilter function='member' level='[DBA]' member='&quot;FIVE GUYS FAMOUS BURGERS AND FRIES&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurant List by Violation Count'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:DBA:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:DBA:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[attr:CUISINE DESCRIPTION:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[attr:ZIP_CODE:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[attr:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[attr:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>2.0</value>
+                                <value>&quot;FIVE GUYS FAMOUS BURGERS AND FRIES&quot;</value>
+                                <value>%many-values%</value>
+                                <value>%many-values%</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>%many-values%</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                      <worksheet name='Restaurants By Zip'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Restaurant Name)]'>
+                          <groupfilter function='member' level='[DBA]' member='&quot;FIVE GUYS FAMOUS BURGERS AND FRIES&quot;' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                        </filter>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4980894.5761983832' min='4966848.8249967126' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8227615.1537363902' min='-8243459.6799989138' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>1</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10014</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-74.0034 40.727,-74.0114 40.7282,-74.0094 40.7426,-74.0036 40.7407,-74.001 40.7317))&quot;</value>
+                                <value>40.734299999999998</value>
+                                <value>-74.006</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>1</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10011</value>
+                                <value>&quot;POLYGON((-73.9923 40.7436,-73.9909 40.7397,-73.997 40.7314,-74.001 40.7317,-74.0036 40.7407,-74.0094 40.7426,-74.0089 40.7511,-73.9923 40.7436))&quot;</value>
+                                <value>40.7393</value>
+                                <value>-73.998900000000006</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Let&apos;s clear our selection by clicking on the Five Guys bar in Restaurant List by Violation Count' captured-sheet='Restaurant Dashboard' id='17'>
+                    <capturedDeltas>
+                      <worksheet name='Average Rodent Violations By Ratings &amp; Price'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>5.1481481481481479</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>5.2131147540983607</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.5&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                      <worksheet name='Cuisine and Rodent Violations'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurant List by Violation Count'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10011' />
+                              <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurants By Zip'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                              <groupfilter function='member' level='[rounded_rating]' member='&quot;4.5&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4980894.5761983832' min='4966848.8249967126' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8227615.1537363902' min='-8243459.6799989138' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>50</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10014</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-74.0034 40.727,-74.0114 40.7282,-74.0094 40.7426,-74.0036 40.7407,-74.001 40.7317))&quot;</value>
+                                <value>40.734299999999998</value>
+                                <value>-74.006</value>
+                              </tuple>
+                            </tuple-reference>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>65</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10011</value>
+                                <value>&quot;POLYGON((-73.9923 40.7436,-73.9909 40.7397,-73.997 40.7314,-74.001 40.7317,-74.0036 40.7407,-74.0094 40.7426,-74.0089 40.7511,-73.9923 40.7436))&quot;</value>
+                                <value>40.7393</value>
+                                <value>-73.998900000000006</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Now unclick the square in the the Violations heat map.' captured-sheet='Restaurant Dashboard' id='11'>
+                    <capturedDeltas>
+                      <worksheet name='Average Rodent Violations By Ratings &amp; Price'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                          </groupfilter>
+                        </filter>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[avg:Calculation_148900313420677120:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:price_level:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:rounded_rating:nk]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>4.5238095238095237</value>
+                                <value>&quot;1.0&quot;</value>
+                                <value>&quot;4.0&quot;</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                      <worksheet name='Cuisine and Rodent Violations'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurant List by Violation Count'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurants By Zip'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Price Level,Rating)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[price_level]' member='&quot;1.0&quot;' />
+                            <groupfilter function='member' level='[rounded_rating]' member='&quot;4.0&quot;' />
+                          </groupfilter>
+                        </filter>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4980894.5761983832' min='4966848.8249967126' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8227615.1537363902' min='-8243459.6799989138' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>21</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10014</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-74.0034 40.727,-74.0114 40.7282,-74.0094 40.7426,-74.0036 40.7407,-74.001 40.7317))&quot;</value>
+                                <value>40.734299999999998</value>
+                                <value>-74.006</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Click &quot;Reset Map Filter&quot; in the pane to the left of the map. This can be used to unclick a selection on the map' captured-sheet='Restaurant Dashboard' id='12'>
+                    <capturedDeltas>
+                      <worksheet name='Average Rodent Violations By Ratings &amp; Price'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Cuisine and Rodent Violations'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurant List by Violation Count'>
+                        <filter class='categorical' column='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Action (Reset Filter,Zip Code)]'>
+                          <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='member' level='[Calculation_92253480755834880]' member='&quot;Reset Filter&quot;' />
+                            <groupfilter function='member' level='[ZIP_CODE]' member='10014' />
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                      <worksheet name='Restaurants By Zip'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4980179.7669318197' min='4968336.0505491057' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8228585.6702951891' min='-8241942.0352376522' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                        <selection-collection>
+                          <tuple-selection>
+                            <tuple-reference>
+                              <tuple-descriptor>
+                                <pane-descriptor>
+                                  <x-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                  </x-fields>
+                                  <y-fields>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                    <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  </y-fields>
+                                </pane-descriptor>
+                                <columns>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[cnt:DBA:qk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:Calculation_92253480755834880:nk]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[none:ZIP_CODE:ok]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Geometry (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]</field>
+                                  <field>[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]</field>
+                                </columns>
+                              </tuple-descriptor>
+                              <tuple>
+                                <value>376</value>
+                                <value>&quot;Reset Filter&quot;</value>
+                                <value>10014</value>
+                                <value>&quot;POLYGON((-74.001 40.7317,-74.0034 40.727,-74.0114 40.7282,-74.0094 40.7426,-74.0036 40.7407,-74.001 40.7317))&quot;</value>
+                                <value>40.734299999999998</value>
+                                <value>-74.006</value>
+                              </tuple>
+                            </tuple-reference>
+                          </tuple-selection>
+                        </selection-collection>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Finally, click the Unpin icon on the map to &quot;reset map' captured-sheet='Restaurant Dashboard' id='13'>
+                    <capturedDeltas>
+                      <worksheet name='Restaurants By Zip'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Zooming: Now that we are zoomed, we can move around the map by setting the pan function (crossed arrows) in the map tools icon (lookes like a &quot;play&quot; button).' captured-sheet='Restaurant Dashboard' id='14'>
+                    <capturedDeltas>
+                      <worksheet name='Restaurants By Zip'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' projection='EPSG:3857' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point captured-sheet='Restaurant Dashboard' id='19'>
+                    <capturedDeltas>
+                      <worksheet name='Restaurants By Zip'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Latitude (generated)]' field-type='quantitative' max='4997609.4481754843' min='4974015.1873897407' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1klyxjd02n97sj16nkyth0xvqjm6].[Longitude (generated)]' field-type='quantitative' max='-8215647.7498048292' min='-8242298.2025066158' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
   </dashboards>
   <windows source-height='30'>
     <window class='worksheet' name='Local Rodent Population Vs Local Restaurants'>
@@ -2435,7 +3905,7 @@
         </highlight>
       </viewpoint>
     </window>
-    <window class='dashboard' maximized='true' name='Restaurant Dashboard'>
+    <window class='dashboard' name='Restaurant Dashboard'>
       <viewpoints>
         <viewpoint name='Average Rodent Violations By Ratings &amp; Price'>
           <zoom type='entire-view' />
@@ -2469,6 +3939,10 @@
       </viewpoints>
       <active id='1' />
     </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
     <window class='dashboard' name='Restaurant Dashboard 2'>
       <viewpoints>
         <viewpoint name='Local Rodent Population Vs Local Restaurants'>
@@ -2478,7 +3952,7 @@
           </highlight>
         </viewpoint>
       </viewpoints>
-      <active id='10' />
+      <active id='-1' />
     </window>
   </windows>
   <thumbnails>
@@ -4620,6 +6094,608 @@
       g+v1ir7vsVwus/d0nwHAc+Dt93usVitst1vc73fUdY0QQvavgPsV+Dr6AJhS+j72IQQCYNM0
       VNVs/d/+C+SGJMwMbdvidDqhqioAwPl8BkkMwwBmvKWjmAGqiqIoMJvNXupmBpKYz+fZeo9C
       gCejGIKePABbI0ZQ+Iv/TgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Story 1' width='192'>
+      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
+      dywBuXyKAAAAAElFTkSuQmCC
     </thumbnail>
   </thumbnails>
   <external>
